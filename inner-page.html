@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Inner Page - iPortfolio Bootstrap Template</title>
+  <title>Inner Page - iPortfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -129,6 +129,34 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+
+
+  <script>
+    $("#submit-form").submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+            url:"https://script.google.com/macros/s/AKfycbzxflVUpB0cAYTw3gmnkcQUrXlmdKBrIGClzeyGd3VIc8T2fhDhY34xRTNoJhYDbb2fzQ/exec",
+            data:$("#submit-form").serialize(),
+            method:"post",
+            success:function (response){
+                alert("Thanks for contacting")
+                //window.location.reload()
+                window.location.href="https://saviokjames.github.io"
+            },
+            error:function (err){
+                alert("Something Error")
+
+            }
+        })
+    })
+</script>
+
+
+
+
+
+
+  
 </body>
 
 </html>
