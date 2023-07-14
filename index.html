@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <title> My Portfolio</title>
   <meta content="" name="description">
@@ -524,6 +525,25 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+<script>
+    $("#submit-form").submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+            url:"https://script.google.com/macros/s/AKfycbwkXTQVAGnxocH477yTnTGhHkgkjtfV69yFlSJu2XiI2DWxMMiQkFXk23Scx3JOPthNLg/exec",
+            data:$("#submit-form").serialize(),
+            method:"post",
+            success:function (response){
+                alert("Thanks for contacting")
+                //window.location.reload()
+                window.location.href="https://saviokjames.github.io/"
+            },
+            error:function (err){
+                alert("Something Error")
+
+            }
+        })
+    })
+</script>
 
 
  
